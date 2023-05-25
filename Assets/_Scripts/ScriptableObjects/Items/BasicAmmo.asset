@@ -15,4 +15,4 @@ MonoBehaviour:
   Prefab: {fileID: 22010943323666486, guid: cc2ad1a951396b648902c1465d9f2fbf, type: 3}
   Type: 2
   Description: 
-  BulletAmount: 0
+  BulletAmount: 1

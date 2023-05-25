@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickuper : MonoBehaviour
@@ -12,7 +10,16 @@ public class ItemPickuper : MonoBehaviour
         if (item)
         {
             _inventory.AddItem(item.ItemObj, 1);
+            _inventory.Save();
             Destroy(collision.gameObject);
         }
+    }
+
+    private void Update()
+    {
+    }
+    private void OnApplicationQuit()
+    {
+        _inventory.Slots.Clear();
     }
 }

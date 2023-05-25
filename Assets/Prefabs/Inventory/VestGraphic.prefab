@@ -132,9 +132,11 @@ GameObject:
   - component: {fileID: 6662204793769274844}
   - component: {fileID: 6662204793769274834}
   - component: {fileID: 6662204793769274835}
+  - component: {fileID: -4158371490463527171}
+  - component: {fileID: 3121459075674970783}
   m_Layer: 5
   m_Name: VestGraphic
-  m_TagString: Untagged
+  m_TagString: Vest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +201,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-4158371490463527171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662204793769274845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26accc6b6c9acc7428b2d7538779a886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemObj: {fileID: 11400000, guid: d02c25e49b89f6f44a0ba026c89bedb5, type: 2}
+--- !u!114 &3121459075674970783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662204793769274845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c9008fc548b7c4d8769b8fc4f0b500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventory: {fileID: 11400000, guid: ec691ebd6a3deff45a9270a75d8f79f5, type: 2}
+  _deleteButton: {fileID: 6662204792982293110}
 --- !u!1 &6662204794251819296
 GameObject:
   m_ObjectHideFlags: 0

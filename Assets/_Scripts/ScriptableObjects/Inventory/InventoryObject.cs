@@ -52,6 +52,18 @@ public class InventoryObject : ScriptableObject, ISerializationCallbackReceiver
         }
 
     }
+
+    public bool CheckForItem(ItemObject item)
+    {
+        for (int i = 0; i < Slots.Count; i++)
+        {
+            if (Slots[i].Item == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public void Save()
     {
         string saveData = JsonUtility.ToJson(this, true);

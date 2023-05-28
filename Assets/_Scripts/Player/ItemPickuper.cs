@@ -9,6 +9,7 @@ public class ItemPickuper : MonoBehaviour
         var item = collision.gameObject.GetComponent<Item>();
         if (item)
         {
+            EventManager.Instance.ItemPicked();
             _inventory.AddItem(item.ItemObj, 1);
             _inventory.Save();
             Destroy(collision.gameObject);

@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DisplayInventory : MonoBehaviour
 {
     [SerializeField]
     private InventoryObject _inventory;
-    
-    Dictionary<InventorySlot, GameObject> _itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
+
+    [SerializeField]
+    private Dictionary<InventorySlot, GameObject> _itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
     // Start is called before the first frame update
     void Start()
     {
         CreateDisplay();
+        //_inventoryButton.onClick.AddListener(InventoryButtonPressed);
     }
     void Update()
     {
@@ -39,6 +42,7 @@ public class DisplayInventory : MonoBehaviour
         {
             if (_itemsDisplayed.ContainsKey(_inventory.Slots[i]))
             {
+                print(_inventory.Slots[i].Item);
                 _itemsDisplayed[_inventory.Slots[i]].GetComponentInChildren<TextMeshProUGUI>().text = _inventory.Slots[i].Amount.ToString("n0");
             }
             else
@@ -48,6 +52,15 @@ public class DisplayInventory : MonoBehaviour
                 _itemsDisplayed.Add(_inventory.Slots[i], obj);
             }
         }
-       
+
+        foreach (InventorySlot slot in _itemsDisplayed.Keys)
+        {
+            if (!_inventory.Slots.Contains(slot))
+            {
+                Destroy(_itemsDisplayed[slot].gameObject);
+                _itemsDisplayed.Remove(slot);
+                break;
+            }
+        }
     }
 }

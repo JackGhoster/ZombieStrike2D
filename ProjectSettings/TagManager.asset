@@ -8,6 +8,7 @@ TagManager:
   - Ammo
   - Vest
   - Ak47
+  - Zombie
   layers:
   - Default
   - TransparentFX

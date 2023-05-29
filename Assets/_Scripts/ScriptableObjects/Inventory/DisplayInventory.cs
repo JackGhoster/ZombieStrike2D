@@ -28,7 +28,7 @@ public class DisplayInventory : MonoBehaviour
     {
         for(int i = 0; i < _inventory.Slots.Count; i++)
         {
-            var obj = Instantiate(_inventory.Slots[i].Item.Prefab, Vector3.zero, Quaternion.identity, transform);
+            var obj = Instantiate(_inventory.Slots[i].Item.Graphic, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = _inventory.Slots[i].Amount.ToString("n0");
             _itemsDisplayed.Add(_inventory.Slots[i], obj);
         }
@@ -42,12 +42,11 @@ public class DisplayInventory : MonoBehaviour
         {
             if (_itemsDisplayed.ContainsKey(_inventory.Slots[i]))
             {
-                print(_inventory.Slots[i].Item);
                 _itemsDisplayed[_inventory.Slots[i]].GetComponentInChildren<TextMeshProUGUI>().text = _inventory.Slots[i].Amount.ToString("n0");
             }
             else
             {
-                var obj = Instantiate(_inventory.Slots[i].Item.Prefab, Vector3.zero, Quaternion.identity, transform);
+                var obj = Instantiate(_inventory.Slots[i].Item.Graphic, Vector3.zero, Quaternion.identity, transform);
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = _inventory.Slots[i].Amount.ToString("n0");
                 _itemsDisplayed.Add(_inventory.Slots[i], obj);
             }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892f926401146244ca06ae22e70e85af, type: 3}
   m_Name: BasicVest
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 6662204793769274845, guid: 752fedb0eb3095c4dbc7452cac05ce94, type: 3}
+  Graphic: {fileID: 6662204793769274845, guid: 752fedb0eb3095c4dbc7452cac05ce94, type: 3}
+  WorldInstance: {fileID: 9106125578763195417, guid: 35a7d794e9149d84cb688196a3f92d75, type: 3}
   Type: 1
   Description: 
   DefenceStats: 0

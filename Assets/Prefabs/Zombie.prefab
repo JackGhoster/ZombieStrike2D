@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5653895698349897802}
   - component: {fileID: 2830126523299002201}
   - component: {fileID: 3444986610807335041}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000086570417039}
   - component: {fileID: 1952000086570417040}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LegR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000086754304227}
   - component: {fileID: 1952000086754304228}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Elbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000086812254945}
   - component: {fileID: 1952000086812254946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952000086984508241}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,8 @@ GameObject:
   - component: {fileID: 6326565723611770926}
   - component: {fileID: 2528543353906186294}
   - component: {fileID: 5249512135586039340}
-  m_Layer: 0
+  - component: {fileID: 8430096860956432030}
+  m_Layer: 3
   m_Name: Zombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -489,6 +490,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 0}
+--- !u!114 &8430096860956432030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952000087010038905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c6c17da4618944da28ec8aeb3afcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _database: {fileID: 11400000, guid: 2f6cebedb7463984588afc7a00f5594e, type: 2}
 --- !u!1 &1952000087392603565
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000087392603566}
   - component: {fileID: 1952000087392603567}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Elbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000087691414718}
   - component: {fileID: 1952000087691414719}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000087702510839}
   - component: {fileID: 1952000087702510840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952000088108341347}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ArmR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952000088260515487}
   - component: {fileID: 1952000088260515168}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LegL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952000088304166409}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ArmL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +915,7 @@ GameObject:
   - component: {fileID: 6907391470035648882}
   - component: {fileID: 237644421046312428}
   - component: {fileID: 6724941775587674408}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1015,7 @@ GameObject:
   - component: {fileID: 8495674668586659291}
   - component: {fileID: 7793693448215173507}
   - component: {fileID: 6976639369958309301}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

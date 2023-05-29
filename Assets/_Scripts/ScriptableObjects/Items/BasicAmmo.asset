@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f280a116c95eee44f89a1563b34db699, type: 3}
   m_Name: BasicAmmo
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 22010943323666486, guid: cc2ad1a951396b648902c1465d9f2fbf, type: 3}
+  Graphic: {fileID: 22010943323666486, guid: cc2ad1a951396b648902c1465d9f2fbf, type: 3}
+  WorldInstance: {fileID: 8426363106869473269, guid: befb42ab090f13147bda6fa85a1cd95d, type: 3}
   Type: 2
   Description: 
   BulletAmount: 1

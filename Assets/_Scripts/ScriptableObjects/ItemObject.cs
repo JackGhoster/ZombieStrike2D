@@ -9,7 +9,8 @@ using UnityEngine;
 
 public abstract class ItemObject : ScriptableObject
 {
-    public GameObject Prefab;
+    public GameObject Graphic;
+    public GameObject WorldInstance;
     public ItemType Type;
     [TextArea(10,15)]
     public string Description;

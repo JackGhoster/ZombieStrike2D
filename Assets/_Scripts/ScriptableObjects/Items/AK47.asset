@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84a8c4950c6b0f4687a96262b241767, type: 3}
   m_Name: AK47
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 89974549833758345, guid: d690c994c4e8fd04cb8977dae3b1323f, type: 3}
+  Graphic: {fileID: 89974549833758345, guid: d690c994c4e8fd04cb8977dae3b1323f, type: 3}
+  WorldInstance: {fileID: 9106125578763195417, guid: d0af70e68d40abd4fa068f298e8e5aa3, type: 3}
   Type: 0
   Description: 

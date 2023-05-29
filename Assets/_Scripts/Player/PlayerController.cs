@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-/// <summary>
-/// Controls the movement aspect of a player
-/// </summary>
+
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +19,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Range(1f, 5f)]
     private float _moveSpeed = 2f;
 
+
+    private EnemyAI[] _enemies;
+
     private Rigidbody2D _rigidbody;
 
     private void Awake()
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _shootingButton.onClick.AddListener(Shoot);
+        _enemies = FindObjectsOfType<EnemyAI>();
     }
 
     private void FixedUpdate()
@@ -46,7 +48,27 @@ public class PlayerController : MonoBehaviour
         if (_inventory.CheckForItem(_bullet)){
             EventManager.Instance.Shooting();
             _inventory.RemoveItem(_bullet);
-            _inventory.Save();        
+            _inventory.Save();
+            FindClosestEnemy().gameObject.GetComponent<HealthManager>().UpdateHealth(value: Random.Range(30,50));
         }
+    }
+
+    private Transform FindClosestEnemy()
+    {
+        float distanceToClosest = float.PositiveInfinity;
+        EnemyAI closestEnemy = null;
+
+        _enemies = FindObjectsOfType<EnemyAI>();
+
+        foreach (EnemyAI enemy in _enemies)
+        {
+            float distance = (enemy.transform.position - transform.position).magnitude;
+            if (distance < distanceToClosest)
+            {
+                distanceToClosest = distance;
+                closestEnemy = enemy;
+            }
+        }
+        return closestEnemy.gameObject.transform;
     }
 }

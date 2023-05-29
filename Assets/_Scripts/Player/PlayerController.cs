@@ -49,7 +49,10 @@ public class PlayerController : MonoBehaviour
             EventManager.Instance.Shooting();
             _inventory.RemoveItem(_bullet);
             _inventory.Save();
-            FindClosestEnemy().gameObject.GetComponent<HealthManager>().UpdateHealth(value: Random.Range(30,50));
+            if(Vector2.Distance(transform.position, FindClosestEnemy().position) < 5f)
+            {
+                FindClosestEnemy().gameObject.GetComponent<HealthManager>().UpdateHealth(value: Random.Range(30, 50));
+            }
         }
     }
 
